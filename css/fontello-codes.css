@@ -1,0 +1,20 @@
+
+.icon-user:before { content: '\e800'; } /* '' */
+.icon-location:before { content: '\e801'; } /* '' */
+.icon-phone:before { content: '\e802'; } /* '' */
+.icon-up-open:before { content: '\e803'; } /* '' */
+.icon-publish:before { content: '\e804'; } /* '' */
+.icon-mobile-1:before { content: '\e805'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-angle-double-down:before { content: '\f103'; } /* '' */
+.icon-desktop:before { content: '\f108'; } /* '' */
+.icon-code:before { content: '\f121'; } /* '' */
+.icon-calendar-empty:before { content: '\f133'; } /* '' */
+.icon-youtube:before { content: '\f167'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-chart-line:before { content: '\f201'; } /* '' */
+.icon-diamond:before { content: '\f219'; } /* '' */
