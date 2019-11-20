@@ -120,6 +120,19 @@ $(document).ready(function () {
                     setTimeout(function(){$(this).hide()}.bind(this),500)
                 }
             */
+
+            //Gallery
+            setTimeout(function() {
+                max = $('.works-portfolio-explame:visible').length;
+                $('.works-icons-show:visible').each(function(i, el) {
+                    $(el).unbind();
+                    $(el).on('click', function() {
+                        $('body').removeClass('scrollbar-show');
+                        $('#gallery-show-wrapper').addClass('show-wrapper');
+                        addImage(i);
+                    });
+                });
+            },500);
         })
     })
 
@@ -145,7 +158,101 @@ $(document).ready(function () {
             $("button.navbar-toggler").click();
         }
     });
-    
+
+    //--------- Gallery -------------//
+    let max = $('.works-portfolio-explame:visible').length;
+    $('.works-icons-show:visible').each(function(i, el) {
+        $(el).on('click', function() {
+            $('body').removeClass('scrollbar-show');
+            $('#gallery-show-wrapper').addClass('show-wrapper');
+            addImage(i);
+        });
+    });
+
+    $('.prev-gallery-photo').on('click', function() {
+        $('.gallery-photo-wrapper').addClass('hide-ele-gallery');
+        $('.loader-photo').removeClass('hide-ele-gallery');
+        let i = $('.gallery-photo-cnt').attr('data-number')*1-1;
+        if(i===-1) i=max-1;
+        $('.gallery-photo-cnt').remove();
+
+        addImage(i);
+    });
+
+    $('.next-gallery-photo').on('click', function() {
+        $('.gallery-photo-wrapper').addClass('hide-ele-gallery');
+        $('.loader-photo').removeClass('hide-ele-gallery');
+        let i = $('.gallery-photo-cnt').attr('data-number')*1+1;
+        if(i===max) i=0;
+        $('.gallery-photo-cnt').remove();
+
+        addImage(i);
+    });
+
+    function addImage(i) {
+        const image = new Image();
+        $(image).one('load',function() {
+            $('.gallery-photo-wrapper').removeClass('hide-ele-gallery');
+            $('.loader-photo').addClass('hide-ele-gallery');
+        });
+        
+        $(image).one('click',function() {
+            $('.gallery-photo-wrapper').addClass('hide-ele-gallery');
+            $('.loader-photo').removeClass('hide-ele-gallery');
+            let i = $('.gallery-photo-cnt').attr('data-number')*1+1;
+            if(i===max) i=0;
+            $('.gallery-photo-cnt').remove();
+
+            addImage(i);
+        });
+
+        let src = $(".works-portfolio-explame:visible").eq(i).find('.gallery-photo').attr('src');
+        image.src = src;
+        image.className = "gallery-photo-cnt"
+        image.dataset.number = i;
+
+        clearTimeout(timer);
+        $('.gallery-show button').css('opacity','1');
+        timer = setTimeout(function() {$('.gallery-show button').css('opacity','0')},1500);
+
+        $('.gallery-photo-explame figcaption').before(image);
+        $('.gallery-counter button').html(i+1+' z '+max)
+    }
+
+    $('.gallery-show').on('click', function(e) {
+        var click = $(e.target);
+        if(click.hasClass('gallery-show')) {
+            $('.gallery-photo-wrapper').addClass('hide-ele-gallery');
+            $('.loader-photo').removeClass('hide-ele-gallery');
+            $('.gallery-photo-cnt').remove();
+
+            $('body').addClass('scrollbar-show');
+            $('#gallery-show-wrapper').removeClass('show-wrapper');
+        }
+    });
+
+    $('.cancel-button').on('click', function() {
+            $('.gallery-photo-wrapper').addClass('hide-ele-gallery');
+            $('.loader-photo').removeClass('hide-ele-gallery');
+            $('.gallery-photo-cnt').remove();
+
+            $('body').addClass('scrollbar-show');
+            $('#gallery-show-wrapper').removeClass('show-wrapper');
+    });
+
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27) $('.gallery-show').click();   // esc
+    });
+
+
+    let timer = 0;
+    $('#gallery-show-wrapper').on('mousemove', function(){
+        clearTimeout(timer);
+        $('.gallery-show button').css('opacity','1');
+        timer = setTimeout(function() {$('.gallery-show button').css('opacity','0')},1500);
+    })
+
+
 });
 
 $(window).on('load', function () {

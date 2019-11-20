@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="reply-to" content="szymon.kotarba988@gmail.com"/>
     <meta name="author" content="Szymon Kotarba"/>
-    <meta name="keywords" content="cv, portfolio, osobiste portfolio, programista, Kotarba, osobiste CV, szablon osobiste portfolio"/>
+    <meta name="keywords" content="cv, portfolio, osobiste portfolio, programista, Kotarba, osobiste CV, szablon osobiste portfolio, portfolio programisty"/>
     <meta name="description" content="Osobiste portfolio"/>
     <meta name="robots" content="index,follow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,6 +51,25 @@
                 </div>
             </div>
             <div id="loading-text">L0AD1NG</div>
+        </div>
+        <div id="gallery-show-wrapper">
+            <div class="gallery-show">
+                <button class="prev-gallery-photo"><i class="icon-left-open"></i></button>
+                <div class="gallery-photo-wrapper hide-ele-gallery">
+                    <button class="cancel-button"><i class="icon-cancel"></i></button>
+                    <figure class="gallery-photo-explame">
+                        <figcaption>
+                            <div class="gallery-counter"><button></button></div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="loader-photo">
+                    <svg class="circular" viewBox="25 25 50 50">
+                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+                    </svg>
+                </div>
+                <button class="next-gallery-photo"><i class="icon-right-open"></i></button>
+            </div>
         </div>
         <header id="home">
             <div id="header-portfolio-wrapper" class="navbar navbar-expand-lg">
@@ -248,82 +267,89 @@
                             <div id="nav-works-portfolio">
                                 <span class="nav-works-items active-w" data-filter="*">Lorem</span>
                                 <span class="nav-works-items" data-filter=".web">Lorem</span>
-                                <span class="nav-works-items" data-filter=".responsive">Lorem</span>
+                                <span class="nav-works-items" data-filter=".back-end">Lorem</span>
                                 <span class="nav-works-items" data-filter=".game">Lorem</span>
                             </div>
                             <div id="works-portfolio-explame-cnt">
-                                <div class="works-portfolio-explame-wrapper web col-lg-4 col-md-6">
-                                    <a href="http://tech-web.5v.pl/" target="_blank">
-                                        <figure class="works-portfolio-explame">
-                                            <div class="shadow-img-portfolio"></div>
-                                            
-                                            <figcaption>
-                                                <h2>Lorem ipsum</h2>
-                                                <p>Lorem ipsum dolor</p>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div class="works-portfolio-explame-wrapper web col-xl-4 col-md-6">
+                                    <figure class="works-portfolio-explame">
+                                        <div class="shadow-img-portfolio"></div>
+                                        <img src="img/egzamin-informatyk.jpg" alt="egzamin-informatyk" class="gallery-photo"/>
+                                        <figcaption>
+                                            <h2>Lorem ipsum</h2>
+                                            <div class="works-portfolio-icons">
+                                                <div class="works-icons"><a href="http://egzamin-informatyk.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
+                                                <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper game col-lg-4 col-md-6">
-                                    <a href="http://snake.5v.pl/" target="_blank">
-                                        <figure class="works-portfolio-explame">
-                                            <div class="shadow-img-portfolio"></div>
-                                            
-                                            <figcaption>
-                                                <h2>Lorem ipsum</h2>
-                                                <p>Lorem ipsum dolor</p>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div class="works-portfolio-explame-wrapper web col-xl-4 col-md-6">
+                                    <figure class="works-portfolio-explame">
+                                        <div class="shadow-img-portfolio"></div>
+                                        <img src="img/tech-web.jpg" alt="tech-web" class="gallery-photo"/>
+                                        <figcaption>
+                                            <h2>Lorem ipsum</h2>
+                                            <div class="works-portfolio-icons">
+                                                <div class="works-icons"><a href="http://tech-web.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
+                                                <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper web col-lg-4 col-md-6">
-                                    <a href="http://for-children.5v.pl/" target="_blank">
-                                        <figure class="works-portfolio-explame">
-                                            <div class="shadow-img-portfolio"></div>
-                                            
-                                            <figcaption>
-                                                <h2>Lorem ipsum</h2>
-                                                <p>Lorem ipsum dolor</p>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div class="works-portfolio-explame-wrapper back-end col-xl-4 col-md-6">
+                                    <figure class="works-portfolio-explame">
+                                        <div class="shadow-img-portfolio"></div>
+                                        <img src="img/login-system.jpg" alt="login-system" class="gallery-photo"/>
+                                        <figcaption>
+                                            <h2>Lorem ipsum</h2>
+                                            <div class="works-portfolio-icons">
+                                                <div class="works-icons"><a href="https://github.com/KoTubA/Login-system" target="_blank"><i class="icon-link"></i></a></div>
+                                                <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper web col-lg-4 col-md-6">
-                                    <a href="http://sport-league.5v.pl/" target="_blank">
-                                        <figure class="works-portfolio-explame">
-                                            <div class="shadow-img-portfolio"></div>
-                                            
-                                            <figcaption>
-                                                <h2>Lorem ipsum</h2>
-                                                <p>Lorem ipsum dolor</p>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div class="works-portfolio-explame-wrapper game col-xl-4 col-md-6">
+                                    <figure class="works-portfolio-explame">
+                                        <div class="shadow-img-portfolio"></div>
+                                        <img src="img/portfolio.jpg" alt="portfolio" class="gallery-photo"/>
+                                        <figcaption>
+                                            <h2>Lorem ipsum</h2>
+                                            <div class="works-portfolio-icons">
+                                                <div class="works-icons"><a href="https://github.com/KoTubA/Personal-Portfoilio" target="_blank"><i class="icon-link"></i></a></div>
+                                                <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper responsive col-lg-4 col-md-6">
-                                    <a href="http://halloween-website.5v.pl/" target="_blank">
-                                        <figure class="works-portfolio-explame">
-                                            <div class="shadow-img-portfolio"></div>
-                                            
-                                            <figcaption>
-                                                <h2>Lorem ipsum</h2>
-                                                <p>Lorem ipsum dolor</p>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div class="works-portfolio-explame-wrapper game col-xl-4 col-md-6">
+                                    <figure class="works-portfolio-explame">
+                                        <div class="shadow-img-portfolio"></div>
+                                        <img src="img/snake.jpg" alt="snake" class="gallery-photo"/>
+                                        <figcaption>
+                                            <h2>Lorem ipsum</h2>
+                                            <div class="works-portfolio-icons">
+                                                <div class="works-icons"><a href="http://snake.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
+                                                <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper web col-lg-4 col-md-6">
-                                    <a href="http://technik-informatyk.5v.pl/" target="_blank">
-                                        <figure class="works-portfolio-explame">
-                                            <div class="shadow-img-portfolio"></div>
-                                            
-                                            <figcaption>
-                                                <h2>Lorem ipsum</h2>
-                                                <p>Lorem ipsum dolor</p>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div class="works-portfolio-explame-wrapper game col-xl-4 col-md-6">
+                                    <figure class="works-portfolio-explame">
+                                        <div class="shadow-img-portfolio"></div>
+                                        <img src="img/technik-informatyk.jpg" alt="technik-informatyk" class="gallery-photo"/>
+                                        <figcaption>
+                                            <h2>Lorem ipsum</h2>
+                                            <div class="works-portfolio-icons">
+                                                <div class="works-icons"><a href="http://technik-informatyk.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
+                                                <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
                                 </div>
+                                <div id="explore-more-gallery"><a href="">ODKRYJ GALERIĘ</a></div>
                             </div>
                         </div>
                     </div>
