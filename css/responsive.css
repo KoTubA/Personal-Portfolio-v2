@@ -1,12 +1,56 @@
+@media (max-width: 1290px) {
+    .timeline {
+        left: 0;
+    }
+
+    #header-main-wrapper {
+        padding-left: 30px;
+    }
+
+    #header-main-arrow {
+        left: -60px;
+    }
+}
+
+@media (max-width: 1050px) {
+    html {
+        font-size: 0.94rem !important;
+    }
+
+    .timeline {
+        left: 10px;
+    }
+
+    #header-main-arrow {
+        left: -50px;
+    }
+}
+
 @media (max-width: 992px) {
+    html {
+        font-size: 0.84rem !important;
+    }
+
+    #description-about-portfolio {
+        margin-top: 80px;
+    }
+
+    .cols-skill:first-child {
+        padding: 0px 20px 0px 0px;
+    }
+
+    .cols-skill:last-child{
+        padding: 0px 0px 0px 20px;
+    }
 
     #description-contact-portfolio {
-        padding: 20px 0px 10px 0px;
+        padding: 40px 0px 20px 0px;
         margin: 80px auto 0px auto;
     }
 
     #main-data {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 
     #main-data input {
@@ -23,13 +67,104 @@
     }
 
     /*Menu style*/
-    #wrapper-items, nav, #nav-header-portfolio {
+    .active a::before {
+        width: calc(100% - 50px) !important;
+        height: calc(60% - 20px) !important;
+    }
+
+    .nav-items a:hover::before {
+        height: 0px;
+    }
+
+    #wrapper-items, nav {
         width: 100%;
     }
 
+    #logo-name-portfolio, .navbar-toggler {
+        z-index: 1001;
+    }
+
+    .navbar-active::after, .navbar-active::before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transform: scaleY(0);
+            -ms-transform: scaleY(0);
+                transform: scaleY(0);
+        -webkit-transform-origin: 0% 0% 0px;
+            -ms-transform-origin: 0% 0% 0px;
+                transform-origin: 0% 0% 0px;
+        z-index: 10;
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
+    }
+
+    .navbar-active::before {
+        -webkit-animation: reveal-v 1s .4s cubic-bezier(0,0,.2,1) both;
+        animation: reveal-v 1s .4s cubic-bezier(0,0,.2,1) both;
+        background-color: var(--main-color);
+    }
+
+    .navbar-active::after {
+        -webkit-animation: reveal-v 1s .8s cubic-bezier(0,0,.2,1) both;
+        animation: reveal-v 1s .8s cubic-bezier(0,0,.2,1) both;
+        background-color: #100E17;
+    }
+
+    nav {
+        height: 100vh;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+        -webkit-transition: all .6s 0s cubic-bezier(.7,0,.3,1);
+        -o-transition: all .6s 0s cubic-bezier(.7,0,.3,1);
+        transition: all .6s 0s cubic-bezier(.7,0,.3,1);
+        width: 100vw;
+        z-index: 1000;
+        background-image: url(../img/line-maker.svg);
+        background-repeat: repeat;
+        background-position: center center;
+    }
+
     #nav-header-portfolio {
-        background: rgba(0, 0, 0, .9);
-        border-top: 1px solid #333;
+        background-color: #100E17;
+        background-image: url(../img/line-maker.svg);
+        background-repeat: repeat;
+        background-position: center center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-transition: all .6s 0s cubic-bezier(.7,0,.3,1);
+        -o-transition: all .6s 0s cubic-bezier(.7,0,.3,1);
+        transition: all .6s 0s cubic-bezier(.7,0,.3,1);
+        -webkit-transform: translateY(-100vh);
+            -ms-transform: translateY(-100vh);
+                transform: translateY(-100vh);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
     }
 
     .nav-items:first-child {
@@ -41,43 +176,58 @@
     }
 
     #nav-header-portfolio a {
-        padding: 11px 25px;
+        padding: 10px 25px;
         margin: 5px 0px;
-        font-size: 12px;
+        font-size: 28px;
     }
 
-    .nav-items {
-        margin-left: 20px;
-        margin-right: 10px;
-    }
-    
     .navbar-toggler, #logo-name-portfolio {
         padding: 0px;
         margin-bottom: 10px;
-    }
-
-    #logo-name-portfolio {
-        font-size: 26px;
     }
 
     .menu-bg {
         padding-top: 24px !important;
         padding-bottom: 6px !important;
     }
+
+    #about-portfolio {
+        padding-top: 150px !important;
+    }
+
+    #career-portfolio {
+        padding-top: 125px !important;
+    }
+
+    #about-portfolio .bullet::before, #career-portfolio .bullet::before {
+        top: 60px;
+    }
+
+    #about-portfolio .bullet h5, #career-portfolio .bullet h5 {
+        top: 55px;
+    }
 }
 
 @media (max-width: 768px) {
 
-    #contact-portfolio, #about-portfolio, #header-portfolio-wrapper .container {
+    html {
+        font-size: 0.7rem !important;
+    }
+
+    #contact-portfolio, #about-portfolio, #career-portfolio, #header-portfolio-wrapper .container, #header-portfolio-title .container {
         max-width: 100%;
     }
 
-    #header-portfolio-wrapper .container {
-        padding: 0px 30px;
+    #header-portfolio-wrapper .container,  #header-portfolio-title .container{
+        padding: 0px 45px;
     }
 
-    #about-portfolio, #contact-portfolio {
-        margin: 100px 30px;
+    #header-main-arrow {
+        left: -50px;
+    }
+
+    #about-portfolio, #contact-portfolio, #career-portfolio {
+        margin: 0px 30px;
     }
 
     #description-about-portfolio, #cnt-main-about {
@@ -89,7 +239,7 @@
     }
 
     #photo-about img {
-        border: 7px solid rgba(0, 0, 0, 0.15);
+        border: 7px solid rgba(255, 255, 255, 0.55);
     }
 
     .services-info-portfolio {
@@ -121,28 +271,169 @@
     #logo-name-portfolio {
         margin-top: 5px;
     }
+
+    .cols-skill {
+        padding: 0px !important;
+    }
+
+    #cnt-about-skills {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .gallery-photo-wrapper {
+        max-width: 100%;
+    }
+
+    button.next-gallery-photo, button.prev-gallery-photo, .gallery-counter {
+        display: none;
+    }
+
+    .dots-gallery-photo {
+        display: block;
+    }
+
+    .gallery-photo-explame figcaption {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    button.next-gallery-photo i::before, button.prev-gallery-photo i::before {
+        font-size: 26px !important;
+    }
+
+    button.next-gallery-photo:hover, button.prev-gallery-photo:hover {
+        color: #aaaaaa;
+    }
+
+    .next-gallery-photo {
+        right: 0;
+    }
+
+    .cancel-button i::before {
+        font-size: 26px !important;
+    }
+
+    .prev-gallery-photo, .next-gallery-photo {
+        margin: 0px !important;
+    }
+
+    .cancel-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    #gallery-show-wrapper {
+        background-color: #1e1e1e;
+    }
 }
 
 @media (max-width: 650px) {
 
-    #header-main-subtitle {
-        font-size: 26px;
+    html {
+        font-size: 0.68rem !important;
     }
 
-    #header-main-title {
-        font-size: 30px;
+    .header-main-title {
+        display: none;
+    }
+
+    .mobile-header-main-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .italic-main {
+        margin-right: 5px;
+    }
+
+    .main-word {
+        font-size: 16px;
+        font-family: 'Muli', sans-serif;
+        background-color: var(--main-color);
+        color: #FFF !important;
+        font-weight: 400;
+        padding: 6px 12px;
+        margin-bottom: 20px;
+        display: block;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
+    .subtitle-header{
+        font-size: 2rem;
+        margin-top: 5px;
+        font-weight: 400;
+    }
+
+    #header-portfolio-title .row{
+        margin: 0px !important;
+    }
+
+    #header-main-wrapper {
+        margin-left: 0px;
+        padding-left: 0px !important;
+    }
+
+    #header-main-arrow-mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    button.next-gallery-photo i::before, button.prev-gallery-photo i::before {
+        margin: 5px 0px !important;
+    }
+
+    .timeline, .scroll-down {
+        display: none;
+    }
+
+    .career-portfolio-wrapper .timeline {
+        display: block;
+        left: 25px;
+    }
+
+    .career-portfolio-wrapper .bullet {
+        left: 25px;
     }
 
     .menu-info {
         min-width: 50%;
     }
 
-    #about-portfolio, #contact-portfolio {
-        margin: 100px 25px;
+    #about-portfolio, #career-portfolio {
+        margin: 0px !important;
     }
 
-    #header-portfolio-wrapper .container {
-        padding: 0px 25px;
+    .career-portfolio-wrapper {
+        max-width: 100% !important;
+    }
+
+    .career-portfolio {
+        padding-left: 30px;
+    }
+
+    #description-about-portfolio, #cnt-main-about {
+        padding: 0px;
+    }
+
+    #header-portfolio-wrapper .container, #header-portfolio-title .container {
+        padding: 0px 35px;
+    }
+
+    #about-portfolio, #career-portfolio {
+        padding-top: 75px !important;
     }
 
     textarea {
@@ -153,54 +444,108 @@
         padding-bottom: 10px;
     }
 
-    #about-portfolio, #services-portfolio, #works-portfolio, #contact-portfolio {
+    #contact-portfolio {
         margin-top: 50px;
+    }
+
+    #career-portfolio {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+
+    .career-portfolio-wrapper .bullet, .career-portfolio-wrapper .timeline {
+        left: 0px;
+    }
+
+    #contact-portfolio {
+        padding-top: 50px !important;
     }
 
     #cnt-main-contact {
         margin-top: 0px;
+        margin-bottom: 30px;
     }
     
     #title-contact {
         margin-bottom: 10px;
         padding-bottom: 10px;
     }
+
+    #title-career h2, #title-works h2 {
+        font-size: 42px;
+    }
+
+    #cnt-about-skills {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .mobile-header-main-title {
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    #header-main-subtitle {
+        display: none;
+    }
+
+    #header-portfolio-title {
+        margin-top: -10% !important;
+    }
 }
 
 @media (max-width: 475px) {
 
-    #header-main-title span {
-        display: block;
+    #header-portfolio-wrapper .container, #about-portfolio, #services-portfolio, footer, #career-portfolio {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    
+    #header-portfolio-title .container {
+        padding-left: 28px !important;
+        padding-right: 28px !important;
     }
 
-    #header-main-title {
-        line-height: normal;
+    #header-main-wrapper {
+        padding: 0px !important;
     }
 
-    #about-portfolio, #services-portfolio, #contact-portfolio {
-        margin: 70px 10px;
+    #header-portfolio-wrapper {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
     }
 
-    #header-portfolio-wrapper .container {
+    #contact-portfolio .row {
         padding: 0px 10px;
+    }
+
+    #header-portfolio-wrapper .container, #header-portfolio-title .container {
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 
     #title-contact {
         font-size: 32px;
     }
 
-    #about-me-portfolio p {
+    #about-me-portfolio p, .career-portfolio p {
         font-size: 15px;
     }
 
     .menu-info {
         min-width: 100%;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
     #social-media-about-portfolio {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     #titile-about {
@@ -215,42 +560,172 @@
     #title-services h2, #title-works h2 {
         font-size: 40px;
     }
+
+    .career-portfolio-wrapper .bullet, .career-portfolio-wrapper .timeline {
+        left: 7px;
+    }
+
+    .career-portfolio {
+        padding-left: 30px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    #title-career h2, #title-works h2 {
+        font-size: 38px;
+    }
+
+    #career-portfolio h4 {
+        font-size: 22px;
+    }
+
+    #works-portfolio-explame-cnt {
+        margin-top: 20px;
+    }
+
+    .works-portfolio-explame figcaption h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 450px) { 
+    html {
+        font-size: 0.62rem !important;
+    }
+}
+
+@media (max-width: 425px) {
+    #header-portfolio-wrapper .container, #about-portfolio, #services-portfolio, footer, #career-portfolio {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    #header-portfolio-title .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .career-portfolio {
+        padding-left: 40px;
+    }
+
+    #contact-portfolio .row {
+        padding: 0px !important;
+    }
+
+    .main-word {
+        font-size: 14px;
+    }
+
+    #titile-about {
+        font-size: 22px;
+    }
+
+    #title-contact {
+        font-size: 26px;
+    }
+
+    #title-career h2, #title-works h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 400px) { 
+    html {
+        font-size: 0.6rem !important;
+    }
+}
+
+@media (max-width: 385px) { 
+    html {
+        font-size: 0.58rem !important;
+    }
 }
 
 @media (max-width: 375px) {
+    html {
+        font-size: 0.53rem !important;
+    }
+
+    #header-portfolio-wrapper .container, #about-portfolio, #services-portfolio, footer, #career-portfolio {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #header-portfolio-title .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .career-portfolio {
+        padding-left: 30px;
+    }
 
     .nav-works-items {
         margin: 0px 8px;
     }
-    
-    #subtitle-services, #subtitle-works {
-        margin: 0px 15px;
+
+    #career-portfolio {
+        margin: 0px;
+        padding: 0px 20px;
+    }
+
+    .social-media {
+        margin: 10px 4px;
+    }
+
+    .menu-info span {
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
     }
 }
+
+@media (max-width: 340px) {
+
+    html {
+        font-size: 0.5rem !important;
+    }
+
+    .career-portfolio-choose span {
+        display: none;
+    }
+
+    .career-portfolio-button {
+        width: 100%;
+    }
+
+    .career-portfolio-choose {
+        width: 50%;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 0.48rem !important;
+    }
+
+    .main-word {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 305px) {
+    html {
+        font-size: 0.46rem !important;
+    } 
+}
+
 
 @media (min-width: 768px) {
 
-    .cols-skill:first-child {
-        padding-right: 50px;
-    }
-
-    .cols-skill:last-child{
-        padding-left: 50px;
-    }
-
     #cnt-about-skills {
         margin: 0px 25px;
-    }
-}
-
-@media (min-width: 800px) {
-
-    #header-main-subtitle {
-        font-size: 36px;
-    }
-
-    #header-main-title {
-        font-size: 48px;
     }
 }
 
@@ -262,14 +737,6 @@
 
     figcaption h2 {
         font-size: 1.5rem;
-    }
-
-    #header-main-subtitle {
-        font-size: 36px;
-    }
-
-    #header-main-title {
-        font-size: 58px;
     }
 }
 
@@ -292,9 +759,6 @@
         padding: 70px 10px 50px 10px;
     }
 
-    #header-main-title {
-        font-size: 58px;
-    }
 }
 
 @media (min-width: 1700px) {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="reply-to" content="szymon.kotarba988@gmail.com"/>
     <meta name="author" content="Szymon Kotarba"/>
-    <meta name="keywords" content="cv, portfolio, osobiste portfolio, programista, Kotarba, osobiste CV, szablon osobiste portfolio, portfolio programisty"/>
+    <meta name="keywords" content="cv, portfolio, osobiste portfolio, programista, Kotuba, osobiste CV, szablon osobiste portfolio, portfolio programisty"/>
     <meta name="description" content="Osobiste portfolio"/>
     <meta name="robots" content="index,follow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +21,7 @@
     <link rel="Stylesheet" type="text/css" href="css/style.css"/>
     <link rel="Stylesheet" type="text/css" href="css/animate.css"/>
     <link rel="Stylesheet" type="text/css" href="css/scrollbar.css"/>
-    <!--<link rel="Stylesheet" type="text/css" href="css/responsive.css"/>-->
+    <link rel="Stylesheet" type="text/css" href="css/responsive.css"/>
     <link rel="Stylesheet" type="text/css" href="css/fontello.css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
@@ -55,7 +55,7 @@
         <div id="gallery-show-wrapper">
             <div class="gallery-show">
                 <button class="prev-gallery-photo"><i class="icon-left-open"></i></button>
-                <div class="gallery-photo-wrapper hide-ele-gallery">
+                <div class="gallery-photo-wrapper">
                     <button class="cancel-button"><i class="icon-cancel"></i></button>
                     <figure class="gallery-photo-explame">
                         <figcaption>
@@ -76,12 +76,13 @@
                 <div class="container">
                     <div id="wrapper-items">
                         <div id="logo-name-portfolio"><a href=""><span>&lt;</span>Kotuba<span>&sol;&gt;</span></a></div>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#nav-header-portfolio" aria-controls="nav-header-portfolio" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                        <button class="navbar-toggler">
                             <i class="icon-menu"></i>
+                            <i class="icon-cancel-1 hide-icon-nav"></i>
                         </button>
                     </div>
                     <nav>
-                        <div id="nav-header-portfolio" class="collapse navbar-collapse">
+                        <div id="nav-header-portfolio" class="navbar-collapse navbar-active'">
                             <div class="nav-items active" id="home-nav"><a href="">home</a></div>
                             <div class="nav-items" id="about-nav"><a href="">o mnie</a></div>
                             <div class="nav-items" id="career-nav"><a href="">kariera</a></div>
@@ -95,9 +96,7 @@
         <section class="full-space">
             <div id="cnt-portfolio" class="container-fluid">
                 <div id="header-portfolio">
-                    <div id="particles-js">
-
-                    </div>
+                    <div id="particles-js"></div>
                     <img src="img/header-portfolio.jpg" alt="header-portfolio"/>
                     <!--<div class="shadow-img-portfolio"></div>-->
                     <div id="header-portfolio-title">
@@ -107,6 +106,10 @@
                                     <div id="header-main-subtitle" class="animate-el-hidden-last">Home &sol;&gt;</div>
                                     <div class="header-main-title animate-el-hidden">Witaj nazywam się <span>Szymon Kotarba</span></div>
                                     <div class="header-main-title animate-el-hidden">jestem <span class="italic-main">designerem</span> & web developerem</div>
+                                    <div class="header-main-title animate-el-hidden mobile-header-main-title"><span class="main-word">Witaj!</span></div>
+                                    <div class="header-main-title animate-el-hidden mobile-header-main-title">Nazywam się Szymon Kotarba</div>
+                                    <div class="header-main-title animate-el-hidden mobile-header-main-title subtitle-header"><span class="italic-main">designer</span>& web developer</div>
+                                    <div id="header-main-arrow-mobile" style="opacity: 0;"><i class="icon-angle-double-down"></i></div>
                                     <div class="timeline">
                                         <div class="bullet"></div>
                                     </div>
@@ -209,41 +212,64 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div id="career-portfolio-wrapper">
-                                <div class="timeline">
-                                    <div class="bullet"></div>
+                            <div id="career-portfolio-cnt">
+                                <div class="career-portfolio-button">
+                                    <div class="career-portfolio-choose"><i class="icon-briefcase"></i><span>Staż</span></div>
+                                    <div class="career-portfolio-choose"><i class="icon-graduation-cap"></i><span>Edukacja</span></div>
+                                    <div id="career-portfolio-background"></div>
                                 </div>
-                                <div class="career-portfolio-section col-12">
-                                    <div class="bullet"></div>
-                                    <div class="career-portfolio col-6">
-                                        <h4>2010 - 2014</h4>
-                                        <p>Lorem ipsum</p>
+                                <div class="career-portfolio-wrapper col-lg-8 col-md-9 col-10">
+                                    <div class="timeline"></div>
+                                    <div class="career-portfolio-section">
+                                        <div class="bullet"></div>
+                                        <div class="career-portfolio">
+                                            <h4>Lorem ipsum</h4>
+                                            <h6>2017-2020</h6>
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                        </div>
                                     </div>
-                                    <div class="career-portfolio col-6">
-                                        <h4>Lorem ipsum</h4>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                    <div class="career-portfolio-section">
+                                        <div class="bullet"></div>
+                                        <div class="career-portfolio">
+                                            <h4>Lorem ipsum</h4>
+                                            <h6>2014-2017</h6>
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                        </div>
+                                    </div>
+                                    <div class="career-portfolio-section">
+                                        <div class="bullet"></div>
+                                        <div class="career-portfolio">
+                                            <h4>Lorem ipsum</h4>
+                                            <h6>2010-2014</h6>
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="career-portfolio-section col-12">
-                                    <div class="bullet"></div>
-                                    <div class="career-portfolio col-6">
-                                        <h4>Lorem ipsum</h4>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                <div class="career-portfolio-wrapper col-lg-8 col-md-9 col-10" style="display: none !important;">
+                                    <div class="timeline"></div>
+                                    <div class="career-portfolio-section">
+                                        <div class="bullet"></div>
+                                        <div class="career-portfolio">
+                                            <h4>Lorem ipsum</h4>
+                                            <h6>2017-2020</h6>
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                        </div>
                                     </div>
-                                    <div class="career-portfolio col-6">
-                                        <h4>2014 - 2017</h4>
-                                        <p>Lorem ipsum</p>
+                                    <div class="career-portfolio-section">
+                                        <div class="bullet"></div>
+                                        <div class="career-portfolio">
+                                            <h4>Lorem ipsum</h4>
+                                            <h6>2014-2017</h6>
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="career-portfolio-section col-12">
-                                    <div class="bullet"></div>
-                                    <div class="career-portfolio col-6">
-                                        <h4>2017-2020</h4>
-                                        <p>Lorem ipsum</p>
-                                    </div>
-                                    <div class="career-portfolio col-6">
-                                        <h4>Lorem ipsum</h4>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                    <div class="career-portfolio-section">
+                                        <div class="bullet"></div>
+                                        <div class="career-portfolio">
+                                            <h4>Lorem ipsum</h4>
+                                            <h6>2010-2014</h6>
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +282,7 @@
                     <div class="row">
                         <div id="title-works">
                             <h2>
-                                Portfoilio
+                                Portfolio
                             </h2>
                         </div>
                     </div>
@@ -265,18 +291,18 @@
                     <div class="row">
                         <div id="works-portfolio-wrapper">
                             <div id="nav-works-portfolio">
-                                <span class="nav-works-items active-w" data-filter="*">Lorem</span>
-                                <span class="nav-works-items" data-filter=".web">Lorem</span>
-                                <span class="nav-works-items" data-filter=".back-end">Lorem</span>
-                                <span class="nav-works-items" data-filter=".game">Lorem</span>
+                                <span class="nav-works-items active-w" data-filter="*">All</span>
+                                <span class="nav-works-items" data-filter=".frontend">Frontend</span>
+                                <span class="nav-works-items" data-filter=".backend">Backend</span>
+                                <span class="nav-works-items" data-filter=".games">Games</span>
                             </div>
                             <div id="works-portfolio-explame-cnt">
-                                <div class="works-portfolio-explame-wrapper web col-xl-4 col-md-6">
+                                <div class="works-portfolio-explame-wrapper backend col-xl-4 col-md-6">
                                     <figure class="works-portfolio-explame">
                                         <div class="shadow-img-portfolio"></div>
                                         <img src="img/egzamin-informatyk.jpg" alt="egzamin-informatyk" class="gallery-photo"/>
                                         <figcaption>
-                                            <h2>Lorem ipsum</h2>
+                                            <h2>Backend</h2>
                                             <div class="works-portfolio-icons">
                                                 <div class="works-icons"><a href="http://egzamin-informatyk.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
                                                 <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
@@ -284,12 +310,12 @@
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper web col-xl-4 col-md-6">
+                                <div class="works-portfolio-explame-wrapper frontend col-xl-4 col-md-6">
                                     <figure class="works-portfolio-explame">
                                         <div class="shadow-img-portfolio"></div>
                                         <img src="img/tech-web.jpg" alt="tech-web" class="gallery-photo"/>
                                         <figcaption>
-                                            <h2>Lorem ipsum</h2>
+                                            <h2>Frontend</h2>
                                             <div class="works-portfolio-icons">
                                                 <div class="works-icons"><a href="http://tech-web.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
                                                 <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
@@ -297,12 +323,12 @@
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper back-end col-xl-4 col-md-6">
+                                <div class="works-portfolio-explame-wrapper backend col-xl-4 col-md-6">
                                     <figure class="works-portfolio-explame">
                                         <div class="shadow-img-portfolio"></div>
                                         <img src="img/login-system.jpg" alt="login-system" class="gallery-photo"/>
                                         <figcaption>
-                                            <h2>Lorem ipsum</h2>
+                                            <h2>Backend</h2>
                                             <div class="works-portfolio-icons">
                                                 <div class="works-icons"><a href="https://github.com/KoTubA/Login-system" target="_blank"><i class="icon-link"></i></a></div>
                                                 <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
@@ -310,12 +336,12 @@
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper game col-xl-4 col-md-6">
+                                <div class="works-portfolio-explame-wrapper frontend col-xl-4 col-md-6">
                                     <figure class="works-portfolio-explame">
                                         <div class="shadow-img-portfolio"></div>
                                         <img src="img/portfolio.jpg" alt="portfolio" class="gallery-photo"/>
                                         <figcaption>
-                                            <h2>Lorem ipsum</h2>
+                                            <h2>Frontend</h2>
                                             <div class="works-portfolio-icons">
                                                 <div class="works-icons"><a href="https://github.com/KoTubA/Personal-Portfoilio" target="_blank"><i class="icon-link"></i></a></div>
                                                 <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
@@ -323,12 +349,12 @@
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper game col-xl-4 col-md-6">
+                                <div class="works-portfolio-explame-wrapper games col-xl-4 col-md-6">
                                     <figure class="works-portfolio-explame">
                                         <div class="shadow-img-portfolio"></div>
                                         <img src="img/snake.jpg" alt="snake" class="gallery-photo"/>
                                         <figcaption>
-                                            <h2>Lorem ipsum</h2>
+                                            <h2>Games</h2>
                                             <div class="works-portfolio-icons">
                                                 <div class="works-icons"><a href="http://snake.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
                                                 <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
@@ -336,12 +362,12 @@
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <div class="works-portfolio-explame-wrapper game col-xl-4 col-md-6">
+                                <div class="works-portfolio-explame-wrapper frontend col-xl-4 col-md-6">
                                     <figure class="works-portfolio-explame">
                                         <div class="shadow-img-portfolio"></div>
                                         <img src="img/technik-informatyk.jpg" alt="technik-informatyk" class="gallery-photo"/>
                                         <figcaption>
-                                            <h2>Lorem ipsum</h2>
+                                            <h2>Frontend</h2>
                                             <div class="works-portfolio-icons">
                                                 <div class="works-icons"><a href="http://technik-informatyk.5v.pl/" target="_blank"><i class="icon-link"></i></a></div>
                                                 <div class="works-icons works-icons-show"><i class="icon-search"></i></div>
