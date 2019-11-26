@@ -129,14 +129,14 @@
         transition: all .6s 0s cubic-bezier(.7,0,.3,1);
         width: 100vw;
         z-index: 1000;
-        background-image: url(../img/line-maker.svg);
+        background-image: url(../img/line-maker.png);
         background-repeat: repeat;
         background-position: center center;
     }
 
     #nav-header-portfolio {
         background-color: #100E17;
-        background-image: url(../img/line-maker.svg);
+        background-image: url(../img/line-maker.png);
         background-repeat: repeat;
         background-position: center center;
         display: -webkit-box;
