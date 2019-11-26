@@ -1,2 +1,2 @@
 # Personal-Portfoilio-v2
-http://kotuba.5v.pl/
+https://kotuba.github.io/Personal-Portfoilio-v2/
